@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+*@
+
+@model AzureDockerDemo.Models.ArticlesViewModel 
+
+@{
+    ViewData["Title"] = "Articles";
+
+}
+<p1>This is a blog about @ViewData["Title"]</p1>
+
+<table border="1">
+    @{
+        foreach (var item in Model.Articles)
+        {
+            <tr>
+                <td>ID</td>
+                <td>@item.ID</td>
+            </tr>
+
+            <tr>
+                <td>Title</td>
+                <td>@item.Title</td>
+            </tr>
+
+
+            <tr>
+                <td>Author</td>
+                <td>@item.Author</td>
+            </tr>
+
+            <tr>
+                <td>Content</td>
+                <td>@item.Content</td>
+            </tr>
+
+            <tr>
+                <td>Publish Date</td>
+                <td>@item.PublishedOn</td>
+            </tr>
+
+        }
+    }
+
+</table>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="carousel-caption" role="option">
+                <p style="font-size:xx-large; color:darkslategrey">
+                    If you see me swim, your application is up and running in Docker.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
